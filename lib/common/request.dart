@@ -74,7 +74,7 @@ class Request {
   Future<Map<String, dynamic>?> checkForUpdate() async {
     try {
       final response = await dio.get(
-        'https://api.github.com/repos/$repository/releases/latest',
+        'https://154.17.231.11/clash/update.json',
         options: Options(responseType: ResponseType.json),
       );
       if (response.statusCode != 200) return null;

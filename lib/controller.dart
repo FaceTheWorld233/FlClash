@@ -186,7 +186,7 @@ extension InitControllerExt on AppController {
         cancelText: isUser ? null : appLocalizations.noLongerRemind,
       );
       if (res == true) {
-        launchUrl(Uri.parse('https://github.com/$repository/releases/latest'));
+        launchUrl(Uri.parse('https://154.17.231.11/clash/clash.html'));
       } else if (!isUser && res == false) {
         _ref
             .read(appSettingProvider.notifier)
