@@ -87,7 +87,11 @@ jobs:
       - name: Update Version
         run: |
           VERSION=$(echo "${{ github.ref_name }}" | sed 's/^v//')
-          sed -i "s/^version:.*/version: $VERSION/" pubspec.yaml
+          if [[ "$OSTYPE" == "darwin"* ]] || [[ "$RUNNER_OS" == "macOS" ]]; then
+            sed -i '' "s/^version:.*/version: $VERSION/" pubspec.yaml
+          else
+            sed -i "s/^version:.*/version: $VERSION/" pubspec.yaml
+          fi
         shell: bash
 
       - name: Setup
