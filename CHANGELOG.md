@@ -1,3 +1,17 @@
+## v0.8.93
+
+- fix macos build
+
+- fix
+
+- fix
+
+- fix build
+
+- fix build
+
+- Update
+
 ## v0.8.92
 
 - Add sqlite store
